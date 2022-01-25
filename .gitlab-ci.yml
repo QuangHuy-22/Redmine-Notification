@@ -1,0 +1,81 @@
+stages:
+  - validate
+  - deploy_tools
+  - docker_push
+  - release
+  - release_prod
+
+before_script:
+  - export CWD=$PWD
+  - export DEPLOY_PATH=/home/gitlab-runner/deploy-tools-v2
+  - export CI_COMMIT_TAG=${CI_COMMIT_TAG}
+
+code_lint:
+  stage: validate
+  script:
+    - npm install
+    - npm run lint
+  tags:
+    - shell-runner
+  except:
+    - master
+
+pull_deploy_tools:
+  stage: deploy_tools
+  script:
+    - cd $DEPLOY_PATH
+    - git pull
+  only:
+    - develop
+    - master
+    - staging
+    - tags
+  tags:
+    - shell-runner
+
+docker_push:
+  stage: docker_push
+  script:
+    - cd $DEPLOY_PATH
+    - cat build-push.sh
+    - ./build-push.sh $CWD $CI_COMMIT_TAG
+  tags:
+    - shell-runner
+  only:
+    - develop
+    - staging
+    - tags
+
+deploy_dev:
+  stage: release
+  script:
+    - cd $DEPLOY_PATH
+    - cat deploy.sh
+    - ./deploy.sh riskdevelop $CWD
+  only:
+    - develop
+  tags:
+    - shell-runner
+
+#deploy_core_staging:
+#  stage: release
+#  script:
+#    - cd $DEPLOY_PATH
+#    - ./deploy.sh corestaging $CWD
+#  only:
+#    - tags
+#  tags:
+#    - shell-runner
+#  when: manual
+
+deploy_core_prod:
+  stage: release_prod
+  script:
+    - cd $DEPLOY_PATH
+    - git pull
+    - ./deploy.sh riskprod $CWD
+  only:
+    - tags
+  tags:
+    - runner-22-50
+  when: manual

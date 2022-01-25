@@ -1,0 +1,309 @@
+body{
+	font-family: roboto !important;
+	font-size: 13px;
+}
+th{
+	vertical-align: middle !important;
+}
+:root {
+    --blue: #556ee6;
+    --indigo: #564ab1;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #f46a6a;
+    --orange: #f1734f;
+    --yellow: #f1b44c;
+    --green: #34c38f;
+    --teal: #050505;
+    --cyan: #50a5f1;
+    --white: #fff;
+    --gray: #74788d;
+    --gray-dark: #343a40;
+	--pink: #e83e8c;
+	--light: #eff2f7;
+
+    --primary: #008BF4;
+    --secondary: #74788d;
+    --success: #3BB54A;
+    --info: #0B62AB;
+    --warning: #E99323;
+    --danger: #CF232A;
+    --dark: #343A40;
+
+    --f11: 11px;
+    --f12: 12px;
+    --f13: 13px;
+    --f14: 14px;
+    --f16: 16px;
+    --f18: 18px;
+    --f22: 22px;
+    --f26: 26px;
+    --f32: 32px;
+}
+/* color button */
+.btn-info{
+    background-color: #0B62AB !important;
+    border-color: #0B62AB !important;
+}
+.btn-info:hover{
+    background-color: #5390C4 !important;
+    border-color: #5390C4 !important;
+}
+.btn-outline-info{
+	border-color: #0B62AB !important;
+	color: #0B62AB !important;
+}
+.btn-outline-info:hover,.btn-outline-info:active{
+	color: #fff !important;
+}
+.btn-success{
+	background-color: #3BB54A !important;
+    border-color: #3BB54A !important;
+}
+.btn-success:hover{
+    background-color: #62C36E !important;
+    border-color: #62C36E !important;
+}
+.btn-outline-success{
+	border-color: #3BB54A !important;
+	color: #3BB54A !important;
+}
+.btn-outline-success:hover,.btn-outline-success:active{
+	color: #fff !important;
+	background-color: #3BB54A !important;
+    border-color: #3BB54A !important;
+}
+.btn-primary{
+	background-color: #008BF4 !important;
+    border-color: #008BF4 !important;
+}
+.btn-primary:hover{
+    background-color: #33A2F6 !important;
+    border-color: #33A2F6 !important;
+}
+.btn-outline-primary{
+	border-color: #008BF4 !important;
+	color: #008BF4 !important;
+}
+.btn-outline-primary:hover,.btn-outline-primary:active{
+	color: #fff !important;
+	background-color: #008BF4 !important;
+    border-color: #008BF4 !important;
+}
+.btn-warning{
+	background-color: #E99323 !important;
+    border-color: #E99323 !important;
+}
+.btn-warning:hover{
+    background-color: #F4C990 !important;
+    border-color: #F4C990 !important;
+}
+.btn-outline-warning{
+	border-color: #E99323 !important;
+	color: #E99323 !important;
+}
+.btn-outline-warning:hover,.btn-outline-warning:active{
+	color: #fff !important;
+	background-color: #E99323 !important;
+    border-color: #E99323 !important;
+}
+.btn-danger{
+	background-color:#CF232A !important;
+    border-color:#CF232A !important;
+}
+.btn-danger:hover{
+    background-color: #E79094 !important;
+    border-color: #E79094 !important;
+}
+.btn-outline-danger{
+	border-color:#CF232A !important;
+	color:#CF232A !important;
+}
+.btn-outline-danger:hover,.btn-outline-danger:active{
+	color: #fff !important;
+	background-color:#CF232A !important;
+    border-color:#CF232A !important;
+}
+.btn-dark{
+	background-color:#343A40 !important;
+    border-color:#343A40 !important;
+}
+.btn-dark:hover{
+    background-color:#999C9F !important;
+    border-color:#999C9F !important;
+}
+.btn-outline-dark{
+	border-color:#343A40 !important;
+	color:#343A40 !important;
+}
+.btn-outline-dark:hover,.btn-outline-dark:active{
+	color: #fff !important;
+	background-color:#343A40 !important;
+    border-color:#343A40 !important;
+}
+/* Tag */
+.badge{
+	font-size: var(--f12) !important;
+}
+.badge-primary{
+	background-color: #008BF4 !important;
+}
+.badge-soft-primary{
+    color: #008BF4;
+    background-color: #EBF6FF;
+}
+
+.badge-success{
+	background-color: #3BB54A !important;
+}
+.badge-soft-success{
+    color: #3BB54A;
+    background-color: #EBF8EC;
+}
+
+.badge-info{
+	background-color: #0B62AB !important;
+}
+.badge-soft-info{
+    color: #0B62AB;
+    background-color: #F2F7FB;
+}
+
+.badge-Warning{
+	background-color: #E99323 !important;
+}
+.badge-soft-Warning{
+    color: #E99323;
+    background-color: #FDF4E8;
+}
+
+.badge-danger{
+	background-color: #CF232A !important;
+}
+.badge-soft-danger{
+    color: #CF232A;
+    background-color: #FAE8E9;
+}
+
+.badge-dark{
+	background-color: #343A40 !important;
+}
+.badge-soft-dark{
+    color: #343A40;
+    background-color: #EAEBEB;
+}
+
+.page-link:hover{
+	background: #008BF4;
+}
+.form-control:focus{
+	border-color: var(--primary) !important;
+	color:  var(--primary) !important;
+}
+#sidebar-menu ul li a{
+	font-size: var(--f14)
+}
+.btn-more{
+    font-size: 20px;
+    color: #343A40;
+    border: 1px solid #ced4da;
+    padding: 0 5px;
+    border-radius: 3px;
+    background: #fff;
+    transition: all 0.5s ease
+}
+.btn-more:hover{
+	background: #f4f4f4
+}
+/*.navbar-header{
+	background: #242A3B
+}*/
+.box-title{
+	margin-bottom: 20px;
+}
+.box-title h2{
+	font-size: 18px;
+	text-transform: uppercase;
+	display: inline-block;
+	    margin-top: 8px;
+	    margin-bottom: 0
+}
+.box-fillter{
+	background: var(--white);
+	padding: 20px;
+}
+.bf-detail{
+	margin: 5px 0;
+}
+.btn-support{
+	display: inline-block;
+	width: 100%;
+}
+.btn-support p{
+	display: inline-block;
+	    margin: 8px 0;
+}
+.btn-support button{
+	float: right;
+}
+.btn-fillter{
+	margin: 1px 5px;
+}
+.mm-active .active {
+    color: #008BF4 !important;
+    font-weight: 500;
+}
+.mm-active .active i {
+    color: #008BF4 !important;
+}
+.nav-tabs-custom .nav-item .nav-link.active{
+	color: #008BF4;
+	
+}
+.nav-tabs-custom .nav-item .nav-link.active .badge-primary{
+	background: #008BF4 !important
+}
+.nav-tabs-custom .nav-item .nav-link .badge-primary{
+	background: #495057 !important
+}
+.nav-tabs-custom .nav-item .nav-link::after{
+	background: #008BF4 
+}
+.nav-tabs-custom .nav-item .nav-link{
+	font-size: 16px;
+}
+.form-detail .form-group{
+    border-top: 1px solid #EFF2F7;
+}
+.form-erross small{
+    color: var(--danger) !important;
+}
+
+/* Select2 component */
+.select2-container--default .select2-selection--single {
+    height: 33px;
+    border: 1px solid #ced4da;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #84757D;
+    font-size: 13px;
+    line-height: 32px;
+    margin-left: 2px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    font-size: 13px;
+    line-height: 32px;
+    margin-left: 2px;
+}
+
+.select2-results {
+    font-size: 12px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    top: 60%;
+    left: 30%;
+}
+/* End Select2 component */
