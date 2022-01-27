@@ -37,7 +37,7 @@ export class UserService extends BaseService {
   static async updateTime(token, data) {
     try {
       const response = await axios({
-        method: "PUT",
+        method: "post",
         url: `${BASE_URL}/4`,
         headers: {
           Authorization: `Bearer ${token}`,
@@ -56,6 +56,36 @@ export class UserService extends BaseService {
       const response = await axios({
         method: "post",
         url: `${BASE_URL}/create-account`,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        data
+      })
+      return response
+    } catch (error) {
+      return error.response
+    }
+  }
+  static async changePassword(token, data){
+    try {
+      const response = await axios({
+        method: "post",
+        url: `${BASE_URL}/change-password`,
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        data
+      })
+      return response
+    } catch (error) {
+      return error.response
+    }
+  }
+  static async addEmail(token, data){
+    try {
+      const response = await axios({
+        method: "post",
+        url: `${BASE_URL}/create-user`,
         headers: {
           Authorization: `Bearer ${token}`,
         },

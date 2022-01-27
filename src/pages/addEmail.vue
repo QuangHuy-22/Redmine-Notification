@@ -106,7 +106,8 @@
 </template>
 
 <script>
-// import { UserService } from "@/services/user.service.js";
+import { UserService } from "@/services/user.service.js";
+import Swal from 'sweetalert2';
 import NavBar from "./NavBar.vue";
 export default {
   name: "create-account",
@@ -135,10 +136,36 @@ export default {
           el.focus();
           return;
         } else {
-            // const data = {
-            //   userId: this.userId 
-            // }
-            // const response = await UserService.addEmail(token, data)
+          try {
+            const data = {
+              mail: this.email
+            }
+            console.log(data);
+            const response = await UserService.addEmail(this.token, data)
+            if (response.status == 201) {
+              console.log(response);
+              Swal.fire({
+                icon:"success",
+                title:`Thêm email : ${response.data.data.mail} nhận thông báo thành công`,
+            })
+            } else if (response.data.message == "username da ton tai") {
+              Swal.fire({
+                icon:"error",
+                title:`Thêm mới email thất bại`,
+                text:`Email: ${this.email} đã tồn tại`
+            })
+            }
+            else{
+              Swal.fire({
+                icon:"error",
+                title:"Thêm mới email thất bại"
+              })
+            }
+          } catch (error) {
+            console.log(error);
+          } finally{
+            this.loading.isLoading = false;
+          }
         }
         })
     }

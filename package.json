@@ -3,9 +3,14 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint"
+        "serve": "vue-cli-service serve --inline --progress --config build/webpack.dev.conf.js" ,
+        "start": "node server.js",
+        "build": "vue-cli-service build node build/build.js",
+        "lint": "vue-cli-service lint",
+        "unit": "jest --config test/unit/jest.conf.js --coverage",
+        "e2e": "node test/e2e/runner.js",
+        "test": "npm run unit && npm run e2e",
+    
     },
     "dependencies": {
         "axios": "^0.21.4",
@@ -13,6 +18,7 @@
         "bootstrap-vue": "^2.21.1",
         "core-js": "^3.6.5",
         "eslint-plugin-vue": "^7.10.0",
+        "express": "^4.17.2",
         "firebase": "^8.9.1",
         "js-cookie": "^2.2.1",
         "js-file-download": "^0.4.12",

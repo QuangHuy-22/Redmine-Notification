@@ -96,6 +96,7 @@
 <script>
 import { UserService } from "@/services/user.service.js";
 import NavBar from "./NavBar.vue"
+import Swal from 'sweetalert2';
 export default {
   name: "updateTimeLogtime",
     components: { NavBar },
@@ -127,7 +128,16 @@ export default {
       try {
         const response = await UserService.updateTime(this.token, this.timeWeekDto)
         if (response.status == 200) {
-          console.log(true);
+          Swal.fire({
+            icon:"success",
+            title:"Cập nhật giờ thành công"
+          })
+        }
+        else{
+          Swal.fire({
+            icon:"error",
+            title:"Cập nhật giờ thất bại"
+          })
         }
       } catch (error) {
         console.log(error);
