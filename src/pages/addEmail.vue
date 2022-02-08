@@ -9,7 +9,7 @@
       <div class="row justify-content-center" style="padding-bottom: 38px;">
         <div class="col-md-8 col-lg-6 col-xl-5" style="padding: 60px 50px;">
           <div class="card overflow-hidden">
-            <div class="bg-secondary">
+            <div class="bg-success">
               <div class="form-row">
                 <div class="col-7">
                   <div class="text-white p-4">
@@ -76,7 +76,7 @@
                   <div class="form-group row mb-0">
                     <div class="col-12 pr-4 text-right">
                       <button
-                        class="btnRecover btn  w-md waves-effect waves-light bg-secondary  "
+                        class="btnRecover btn  w-md waves-effect waves-light bg-success  "
                         style="font-size: 13px;"
                         type="submit"
                         @click="submit"

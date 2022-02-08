@@ -305,4 +305,7 @@ color: #fff;
 font-size: 13px;
 width: 100px;
 }
+/* .progress-bar{
+    background-color:  #cc2900 !important;
+} */
 </style>

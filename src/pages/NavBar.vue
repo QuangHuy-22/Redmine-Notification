@@ -15,7 +15,7 @@
           location == '/create-account'
             ? 'info'
             : location == '/add-email'
-            ? 'secondary '
+            ? 'success'
             : 'danger'
         "
       >
