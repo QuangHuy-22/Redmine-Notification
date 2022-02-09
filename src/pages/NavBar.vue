@@ -113,7 +113,7 @@
                       <div class="userMenu">
                         <img
                           class="rounded-circle header-profile-user"
-                          style=""
+                          style="height: 35px;"
                           src="../assets/images/users/avatar-dev.jpg"
                           alt="Header Avatar"
                         />

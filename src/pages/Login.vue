@@ -188,6 +188,7 @@ errorNotifi(data) {
 },
 async recover(){
     const { value: username } = await Swal.fire({
+    icon:"question",
     title: 'Quên mật khẩu',
     input: 'email',
     inputLabel: 'Nhập email để lấy lại mật khẩu',
