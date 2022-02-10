@@ -8,7 +8,6 @@ import createAccount from '../pages/createAccount.vue'
 import addEmail from '../pages/addEmail.vue'
 import NavBar from '../pages/NavBar.vue'
 import NotFound from "../pages/NotFound.vue"
-// import health from "./health.js"
 
 Vue.use(VueRouter)
 

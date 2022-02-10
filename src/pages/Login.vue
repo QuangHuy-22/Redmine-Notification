@@ -4,7 +4,7 @@
     <div class="row justify-content-center">
     <div class="col-md-8 col-lg-6 col-xl-5" style="padding: 55px;">
         <div class="card overflow-hidden">
-        <div class="bg-danger progress-bar">
+        <div class="progress-bar">
             <div class="form-row">
             <div class="col-7">
                 <div class="text-login p-4">
@@ -27,6 +27,7 @@
                 class="form-horizontal"
                 action="#"
                 @submit.prevent="handleSubmitLogin"
+                autocomplete="on"
             >
                 <div class="form-group">
                 <label for="username">Tài khoản/Email</label>
@@ -37,6 +38,7 @@
                     id="username"
                     placeholder="abc@email.com"
                     style="font-size: 0.8125rem;"
+                    :autocomplete="this.username.length > 3 ? 'on' : 'off'"
                 />
                 </div>
 
@@ -306,7 +308,7 @@ color: #fff;
 font-size: 13px;
 width: 100px;
 }
-/* .progress-bar{
-    background-color:  #cc2900 !important;
-} */
+.progress-bar{
+    background-color:  #c32232 !important;
+}
 </style>
